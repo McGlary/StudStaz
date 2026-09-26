@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudStaž — каталог стажировок и вакансий</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+<div class="page">
+
+    <header class="site-header">
+        <span class="logo">StudStaž</span>
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li><a href="#catalog">Каталог</a></li>
+                <li><a href="#about">О проекте</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="block">
+            <h1>Каталог стажировок и вакансий для начинающих специалистов</h1>
+            <p>
+                Проект собирает предложения о стажировках и первой работе в IT.
+                По каждой позиции указаны направление, формат работы и требуемые навыки.
+                Выберите подходящую вакансию в каталоге ниже.
+            </p>
+            <hr>
+        </section>
+
+        <section class="block" id="catalog">
+            <h2>Поиск по каталогу</h2>
+            <form action="index.html" method="get" class="search-form">
+                <fieldset>
+                    <legend>Параметры поиска</legend>
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="search-query">Ключевое слово:</label>
+                            <input type="text" id="search-query" name="query" placeholder="например: Python">
+                        </div>
+                        <div class="form-field">
+                            <label for="work-format">Формат работы:</label>
+                            <select id="work-format" name="format">
+                                <option value="">любой</option>
+                                <option value="remote">удалённо</option>
+                                <option value="office">в офисе</option>
+                                <option value="hybrid">гибрид</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn">Найти</button>
+                    </div>
+                </fieldset>
+            </form>
+
+            <h2>Актуальные предложения</h2>
+            <div class="cards-grid">
+
+                <article class="card">
+                    <video src="assets/videos/frontend.mp4" class="card-video" autoplay loop muted playsinline aria-label="Анимация: облачная инфраструктура" title="Облачная инфраструктура" width="400" height="170"></video>
+                    <div class="card-body">
+                        <h3>Frontend-стажёр <span class="new-label">НОВОЕ</span></h3>
+                        <p class="company">Компания: Башинформсвязь</p>
+                        <p class="card-text">Верстка страниц на React, исправление мелких ошибок в интерфейсе под руководством наставника.</p>
+                        <dl class="props">
+                            <div><dt>Направление:</dt> <dd>веб-разработка</dd></div>
+                            <div><dt>Формат:</dt> <dd>удалённо</dd></div>
+                            <div><dt>Навыки:</dt> <dd>HTML, CSS, JavaScript</dd></div>
+                        </dl>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <video src="assets/videos/analytik.mp4" class="card-video" autoplay loop muted playsinline aria-label="Анимация: облачная инфраструктура" title="Облачная инфраструктура" width="400" height="170"></video>
+                    <div class="card-body">
+                        <h3>Стажёр-аналитик данных</h3>
+                        <p class="company">Компания: Яндекс</p>
+                        <p class="card-text">Сбор и очистка данных, подготовка простых отчётов и дашбордов для продуктовой команды.</p>
+                        <dl class="props">
+                            <div><dt>Направление:</dt> <dd>аналитика</dd></div>
+                            <div><dt>Формат:</dt> <dd>гибрид</dd></div>
+                            <div><dt>Навыки:</dt> <dd>Python, SQL, Excel</dd></div>
+                        </dl>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <video src="assets/videos/disorder.mp4" class="card-video" autoplay loop muted playsinline aria-label="Анимация: облачная инфраструктура" title="Облачная инфраструктура" width="400" height="170"></video>
+                    <div class="card-body">
+                        <h3>UX/UI-дизайнер</h3>
+                        <p class="company">Компания: Т-Банк</p>
+                        <p class="card-text">Создание макетов в Figma, проработка пользовательских сценариев, участие в тестировании.</p>
+                        <dl class="props">
+                            <div><dt>Направление:</dt> <dd>дизайн</dd></div>
+                            <div><dt>Формат:</dt> <dd>в офисе</dd></div>
+                            <div><dt>Навыки:</dt> <dd>Figma, прототипирование</dd></div>
+                        </dl>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <video src="assets/videos/backend.mp4" class="card-video" autoplay loop muted playsinline aria-label="Анимация: облачная инфраструктура" title="Облачная инфраструктура" width="400" height="170"></video>
+                    <div class="card-body">
+                        <h3>Backend-стажёр</h3>
+                        <p class="company">Компания: Уралсиб</p>
+                        <p class="card-text">Разработка простых REST API, работа с базой данных, написание документации.</p>
+                        <dl class="props">
+                            <div><dt>Направление:</dt> <dd>разработка</dd></div>
+                            <div><dt>Формат:</dt> <dd>удалённо</dd></div>
+                            <div><dt>Навыки:</dt> <dd>Node.js, PostgreSQL</dd></div>
+                        </dl>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <video src="assets/videos/sys.mp4" class="card-video" autoplay loop muted playsinline aria-label="Анимация: облачная инфраструктура" title="Облачная инфраструктура" width="400" height="170"></video>
+                    <div class="card-body">
+                        <h3>Системный администратор (стажёр) <span class="new-label">НОВОЕ</span></h3>
+                        <p class="company">Компания: Уфанет</p>
+                        <p class="card-text">Ручное администрирование серверов, составление тест-кейсов, оформление баг-репортов.</p>
+                        <dl class="props">
+                            <div><dt>Направление:</dt> <dd>тестирование</dd></div>
+                            <div><dt>Формат:</dt> <dd>в офисе, выезды</dd></div>
+                            <div><dt>Навыки:</dt> <dd>Linux, Windows server, Cisco, Huawei, Docker</dd></div>
+                        </dl>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <video src="assets/videos/chpu.mp4" class="card-video" autoplay loop muted playsinline aria-label="Анимация: облачная инфраструктура" title="Облачная инфраструктура" width="400" height="170"></video>
+                    <div class="card-body">
+                        <h3>Отладчик оборудования</h3>
+                        <p class="company">Компания: ОДК УМПО</p>
+                        <p class="card-text">Настройка оборудования под нужды организации, мониторинг состояний, работа с ЧПУ.</p>
+                        <dl class="props">
+                            <div><dt>Направление:</dt> <dd>инфраструктура</dd></div>
+                            <div><dt>Формат:</dt> <dd>в офисе</dd></div>
+                            <div><dt>Навыки:</dt> <dd>ЧПУ, оборудование</dd></div>
+                        </dl>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="block" id="about">
+            <h2>О проекте</h2>
+            <p>StudStaž предназначен для студентов и начинающих специалистов, которые ищут первую стажировку. Как пользоваться каталогом:</p>
+            <ul class="help-list">
+                <li>Заполните поля формы и нажмите кнопку «Найти», чтобы отфильтровать предложения.</li>
+                <li>Обратите внимание на строку «Навыки» — она показывает, что нужно подтянуть до собеседования.</li>
+                <li>Метка «НОВОЕ» отмечает позиции, добавленные за последнюю неделю.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="site-footer" id="contacts">
+        <p><strong>StudStaž</strong> — каталог стажировок и вакансий.</p>
+        <p>По вопросам работы сайта: <a href="mcglary@vk.com">mcglary@vk.com</a></p>
+        <p>Rubin Rakhmatullin ©  2026. Все права защищены.</p>
+    </footer>
+
+</div>
+
+</body>
+</html>

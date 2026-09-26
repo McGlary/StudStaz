@@ -1,0 +1,275 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Verdana, Tahoma, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+    background-color: #e0dede;
+    color: #000;
+}
+
+/*основа странице белая колонка посередине*/
+.page {
+    max-width: 960px;
+    margin: 20px auto;
+    background-color: #fff;
+    border: 1px solid #555;
+}
+
+.block {
+    padding: 10px;
+}
+
+hr {
+    border: none;
+}
+
+h1 {
+    font-size: 20px;
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 15px;
+    color: #003366;
+    padding-bottom: 4px;
+    margin: 18px 0 12px;
+}
+
+h3 {
+    font-size: 14px;
+    color: #003366;
+    margin-bottom: 4px;
+}
+
+/*шапка (flexbox одна строка)*/
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: #003366;
+    border-bottom: 3px solid #003366;
+    padding: 12px 16px;
+}
+
+.logo {
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.nav-list a:visited {
+    color: #fff;
+    text-decoration: underline;
+}
+
+
+/*форма поиска*/
+fieldset {
+    border: 1px solid #888;
+    padding: 12px;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 6px;
+}
+
+/*flexbox поля в одном ряду*/
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    align-items: flex-end;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 200px;
+}
+
+.form-field label {
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+input[type="text"],
+select {
+    border: 1px solid #666;
+    background-color: #fff;
+    padding: 3px 5px;
+    font-family: inherit;
+    font-size: 12px;
+}
+
+.btn {
+    background-color: #e0e0e0;
+    border: 1px solid #666;
+    padding: 4px 16px;
+    font-family: inherit;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.15s;
+}
+
+.btn:hover {
+    background-color: #c8c8c8;
+}
+
+.btn:active {
+    background-color: #aaa;
+}
+
+/*карточки(grid:сетка)*/
+.cards-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+}
+
+.card {
+    border: 1px solid #999;
+    background-color: #fff;
+    transition: background-color 0.15s;
+}
+
+/*подсветка вакансии при наведении*/
+.card:hover {
+    background-color: #ffffcc;
+}
+
+.card-video {
+    width: 100%;
+    height: 170px;
+    object-fit: cover; /*обрезает лишнее, чтобы видео не сплющивало*/
+    border-bottom: 1px solid #999;
+    background-color: #e0e0e0; /*серый фон пока видео грузится*/
+    display: block;
+}
+
+.card-body {
+    padding: 10px 12px 12px;
+}
+
+.company {
+    font-size: 12px;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+.card-text {
+    margin-bottom: 10px;
+}
+
+/*свойства объекта: dt — жирный, dd — рядом */
+.props div {
+    margin-bottom: 3px;
+    font-size: 12px;
+}
+
+.props dt {
+    display: inline;
+    font-weight: bold;
+}
+
+.props dd {
+    display: inline;
+    margin: 0;
+}
+
+/*мигающая метка НОВОЕ*/
+@keyframes blink {
+    0%, 49%  { opacity: 1; }
+    50%, 100% { opacity: 0; }
+}
+
+.new-label {
+    color: #cc0000;
+    font-size: 11px;
+    animation: blink 1s infinite;
+}
+
+/*о проекте*/
+.help-list {
+    list-style: disc;
+    padding-left: 24px;
+    margin: 8px 0;
+}
+
+.help-list li {
+    margin-bottom: 4px;
+}
+
+.block p {
+    margin-bottom: 8px;
+}
+
+/*подвал*/
+.site-footer {
+    background-color: #003366;
+    color: #fff;
+    font-size: 11px;
+    text-align: center;
+    padding: 16px;
+}
+
+.site-footer p {
+    margin-bottom: 4px;
+}
+
+.site-footer a,
+.site-footer a:visited {
+    color: #99ccff;
+}
+
+/*адаптивность: 360 / 768 / 1280*/
+
+/* от 768px — две колонки */
+@media (min-width: 768px) {
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* от 1024px — три колонки */
+@media (min-width: 1024px) {
+    .cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* узкие екраны */
+@media (max-width: 480px) {
+    body {
+        background-color: #fff;
+    }
+
+    .page {
+        margin: 0 auto;
+        border-left: none;
+        border-right: none;
+    }
+
+    .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
